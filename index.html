@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nauraffa Rayyano | Web Portofolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#0a0d14',
+                            card: '#121824',
+                            accent: '#00f2fe',
+                            purple: '#7928ca',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Font Google: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#0a0d14] text-slate-200 font-['Plus_Jakarta_Sans',sans-serif] selection:bg-cyan-500 selection:text-black overflow-x-hidden relative">
+
+    <!-- Custom Glowing Cursor Follower -->
+    <div id="cursor-dot" class="fixed w-3 h-3 bg-cyan-400 rounded-full pointer-events-none z-50 transition-transform duration-75 -translate-x-1/2 -translate-y-1/2 hidden md:block"></div>
+    <div id="cursor-glow" class="fixed w-80 h-80 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl pointer-events-none z-40 transition-transform duration-300 ease-out -translate-x-1/2 -translate-y-1/2 hidden md:block"></div>
+
+    <!-- Floating Glassmorphism Navbar -->
+    <header class="fixed top-6 inset-x-0 z-40 max-w-5xl mx-auto px-4">
+        <nav class="glass rounded-full px-6 py-3 flex items-center justify-between border border-slate-800/80 shadow-2xl backdrop-blur-md">
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-cyan-400 animate-ping"></span>
+                NAURAFFA<span class="text-cyan-400">RAYYANO</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">Tentang</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">Keahlian</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">Proyek</a>
+                <a href="#terminal" class="hover:text-cyan-400 transition-colors">Terminal</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">Kontak</a>
+            </div>
+
+            <a href="#contact" class="glass-btn text-xs font-semibold px-4 py-2 rounded-full border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 transition-all">
+                Hubungi Saya
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-32 pb-20 flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,242,254,0.08),transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(121,40,202,0.08),transparent_50%)]"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass border border-cyan-500/20 text-cyan-400 text-xs font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    Portofolio Web
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black text-slate-100 mb-4 leading-tight">
+                    Hai, Saya <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Nauraffa Rayyano</span>
+                </h1>
+                
+                <div class="text-xl md:text-2xl font-semibold text-slate-400 mb-6 flex items-center gap-2">
+                    <span>Saya seorang</span>
+                    <span id="typing-text" class="text-cyan-400 font-mono"></span>
+                    <span class="animate-pulse text-cyan-400">|</span>
+                </div>
+
+                <p class="text-slate-400 text-lg mb-8 leading-relaxed max-w-xl">
+                    Halo! Saya adalah seorang mahasiswa Program Studi Pendidikan Teknologi Informasi yang memiliki ketertarikan pada dunia teknologi, pemrograman, dan pengembangan web. Saya terus belajar untuk meningkatkan keterampilan di bidang teknologi informasi, mengembangkan kreativitas, serta menciptakan solusi digital yang bermanfaat. Melalui portofolio ini, saya ingin menampilkan perjalanan belajar, proyek, dan kemampuan yang saya kembangkan.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#projects" class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                        Lihat Portofolio <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#terminal" class="px-6 py-3 rounded-xl glass border border-slate-700 text-slate-200 font-semibold hover:border-cyan-500/50 hover:bg-slate-800/50 transition-all flex items-center gap-2">
+                        <i data-lucide="terminal" class="w-4 h-4 text-cyan-400"></i> Buka Terminal
+                    </a>
+                </div>
+
+                <div class="mt-12 flex items-center gap-6 text-slate-400">
+                    <a href="https://github.com/noxcly" target="_blank" class="hover:text-cyan-400 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                    <a href="https://www.linkedin.com/in/nauraffa-rayyano-973844446/?isSelfProfile=true" target="_blank" class="hover:text-cyan-400 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="mailto:nauraffano08@gmail.com" class="hover:text-cyan-400 transition-colors"><i data-lucide="mail" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+
+            <!-- Avatar & Glow Effect -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-72 h-72 md:w-80 md:h-80">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-purple-600 rounded-3xl rotate-6 blur-2xl opacity-40 animate-pulse"></div>
+                    <div class="relative w-full h-full glass rounded-3xl border border-slate-700/50 overflow-hidden group">
+                        <img 
+                            src="Foto Aku.png" 
+                            alt="Foto Profil Nauraffa Rayyano"
+                            class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4 right-4 p-3 glass rounded-xl border border-slate-700/50">
+                            <p class="text-xs font-mono text-cyan-400">STATUS</p>
+                            <p class="text-sm font-semibold text-slate-200">Aktif Sebagai Mahasiswa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section & Stats Counter -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="glass rounded-3xl p-8 md:p-12 border border-slate-800/80">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-7">
+                        <h2 class="text-2xl md:text-3xl font-bold text-slate-100 mb-4 flex items-center gap-3">
+                            <i data-lucide="user" class="text-cyan-400"></i> Tentang Saya
+                        </h2>
+                        <p class="text-slate-300 leading-relaxed mb-6">
+                            Saya adalah mahasiswa Pendidikan Teknologi Informasi yang berfokus pada web serta perancangan basis data relational (MySQL/MariaDB). Selain itu, saya membuat Python dan pengembangan lainnya di dunia teknologi.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 text-sm text-slate-400 font-mono">
+                            <div><span class="text-cyan-400">Lokasi:</span> Surabaya, Jawa Timur,Indonesia</div>
+                            <div><span class="text-cyan-400">Fakultas:</span> Teknik</div>
+                            <div><span class="text-cyan-400">Fokus:</span> Web & Database</div>
+                            <div><span class="text-cyan-400">Status:</span> Mahasiswa</div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-5 grid grid-cols-2 gap-4">
+                        <div class="glass p-6 rounded-2xl border border-slate-700/50 text-center">
+                            <div class="text-3xl font-black text-cyan-400 mb-1" data-target="2">0</div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Proyek Selesai</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl border border-slate-700/50 text-center">
+                            <div class="text-3xl font-black text-indigo-400 mb-1" data-target="100">%</div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Komitmen Belajar</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl border border-slate-700/50 text-center col-span-2">
+                            <div class="text-3xl font-black text-purple-400 mb-1" data-target="3">0</div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Tabel Skema DB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-slate-100 mb-4">Keahlian</h2>
+                <p class="text-slate-400">Teknologi dan alat yang biasa saya gunakan untuk membangun sistem dan aplikasi web.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="glass p-5 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all group">
+                    <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 w-fit mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="code-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-200 mb-1">Html, Css, Javascript</h3>
+                    <p class="text-xs text-slate-400">Untuk pembuatan halaman web statis dan interaktif</p>
+                </div>
+
+                <div class="glass p-5 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all group">
+                    <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 w-fit mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-200 mb-1">MySQL & MariaDB</h3>
+                    <p class="text-xs text-slate-400">DBMS & Schema Design</p>
+                </div>
+
+                <div class="glass p-5 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all group">
+                    <div class="p-3 rounded-xl bg-purple-500/10 text-purple-400 w-fit mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="terminal" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-200 mb-1">Python</h3>
+                    <p class="text-xs text-slate-400">Untuk Project Sederhana</p>
+                </div>
+
+                <div class="glass p-5 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all group">
+                    <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 w-fit mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="layout" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-200 mb-1">Instructional Media</h3>
+                    <p class="text-xs text-slate-400">Design Canva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-100 mb-4">Proyek Pilihan</h2>
+                    <p class="text-slate-400">Beberapa proyek web, desain sistem database, dan eksperimen desain.</p>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="flex items-center gap-2 glass p-1.5 rounded-xl border border-slate-800">
+                    <button class="filter-btn active text-xs font-semibold px-4 py-2 rounded-lg transition-all" data-filter="all">Semua</button>
+                    <button class="filter-btn text-xs font-semibold px-4 py-2 rounded-lg text-slate-400 hover:text-slate-200 transition-all" data-filter="web">Web</button>
+                    <button class="filter-btn text-xs font-semibold px-4 py-2 rounded-lg text-slate-400 hover:text-slate-200 transition-all" data-filter="db">Database</button>
+                </div>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card glass rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/30 transition-all group" data-category="web">
+                    <div class="relative overflow-hidden aspect-video">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Cyber Glass Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Html, Css, Javascript</span>
+                        <h3 class="text-xl font-bold text-slate-100 mt-1 mb-2">Website Portofolio</h3>
+                        <p class="text-slate-400 text-sm mb-4">Aplikasi web portofolio bertema Cyber-Glassmorphism dengan komponen interaktif dan efek visual modern.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Html</span>
+                            <span class="text-[10px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Css</span>
+                            <span class="text-[10px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">Javascript</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button class="open-modal-btn text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1" data-title="Interactive Cyber Portfolio" data-desc="Aplikasi web portofolio ini dibangun dengan Tailwind CSS, Framer Motion, dan Next.js untuk menyajikan antarmuka bertema futuristik.">
+                                Detail <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/30 transition-all group" data-category="db">
+                    <div class="relative overflow-hidden aspect-video">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="Hospital Database" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wider">Database System</span>
+                        <h3 class="text-xl font-bold text-slate-100 mt-1 mb-2">Management DBMS</h3>
+                        <p class="text-slate-400 text-sm mb-4">Arsitektur database relasional.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">MySQL</span>
+                            <span class="text-[10px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">MariaDB</span>
+                            <span class="text-[10px] font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">ERD</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button class="open-modal-btn text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1" data-title="Management DBMS" data-desc="Sistem basis data yang dinormalisasi hingga 3NF/BCNF untuk mencegah redundansi dan menjaga integritas data antar relasi tabel.">
+                                Detail <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Mini Terminal Section -->
+    <section id="terminal" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="glass rounded-2xl border border-slate-800 overflow-hidden shadow-2xl">
+                <!-- Terminal Header -->
+                <div class="bg-slate-900/80 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                        <span class="text-xs font-mono text-slate-400 ml-2">nauraffa_rayyano</span>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">v1.0.4</span>
+                </div>
+
+                <!-- Terminal Content -->
+                <div class="p-6 font-mono text-sm bg-black/40 min-h-[260px] max-h-[360px] overflow-y-auto" id="terminal-body">
+                    <p class="text-slate-400 mb-2">Selamat datang di terminal interaktif. Ketik <span class="text-cyan-400 font-bold">'help'</span> untuk melihat daftar perintah.</p>
+                </div>
+
+                <!-- Terminal Input -->
+                <div class="bg-slate-900/50 px-6 py-3 border-t border-slate-800/80 flex items-center gap-2">
+                    <span class="text-cyan-400 font-mono font-bold">&gt;</span>
+                    <input type="text" id="terminal-input" class="w-full bg-transparent font-mono text-sm text-slate-100 focus:outline-none" placeholder="Ketik perintah di sini..." autocomplete="off">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="glass rounded-3xl p-8 md:p-12 border border-slate-800 text-center">
+                <h2 class="text-3xl font-bold text-slate-100 mb-4">Mari Bekerja Sama</h2>
+                <p class="text-slate-400 mb-8 max-w-lg mx-auto">Tertarik untuk membangun proyek bersama atau memiliki pertanyaan? Silakan kirim pesan Anda.</p>
+
+                <form id="contact-form" class="max-w-md mx-auto space-y-4 text-left">
+                    <div>
+                        <label class="block text-xs font-mono text-slate-400 mb-1">NAMA</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl glass border border-slate-700 text-slate-100 focus:border-cyan-400 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-400 mb-1">EMAIL</label>
+                        <input type="email" required class="w-full px-4 py-3 rounded-xl glass border border-slate-700 text-slate-100 focus:border-cyan-400 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-400 mb-1">PESAN</label>
+                        <textarea rows="4" required class="w-full px-4 py-3 rounded-xl glass border border-slate-700 text-slate-100 focus:border-cyan-400 focus:outline-none transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-slate-950 font-bold hover:opacity-90 transition-opacity">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800/80 text-center text-slate-500 text-sm">
+        <p>© 2026 Nauraffa Rayyano. Dirancang dengan Html, Css, dan Javascript.</p>
+    </footer>
+
+    <!-- Modal Popup for Project Details -->
+    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass max-w-lg w-full p-6 rounded-2xl border border-slate-700 relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-100">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 id="modal-title" class="text-xl font-bold text-slate-100 mb-2"></h3>
+            <p id="modal-desc" class="text-slate-300 text-sm mb-6 leading-relaxed"></p>
+            <button id="close-modal-btn" class="w-full py-2.5 rounded-xl glass border border-slate-600 text-slate-200 text-sm font-semibold hover:bg-slate-800 transition-colors">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
